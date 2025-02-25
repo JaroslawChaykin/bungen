@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { SurvivorSlice } from "../../pages/home/model/SurvivorsSlice";
+import { survivorSlice } from "../../pages/home/model/SurvivorsSlice";
 
 const reducers = combineReducers({
-  survivors: SurvivorSlice.reducer,
+  survivors: survivorSlice.reducer,
 });
 
 export const mainStore = configureStore({
