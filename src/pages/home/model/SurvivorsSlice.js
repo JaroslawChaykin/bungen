@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
-import { getRandomCharacteristic } from "../../../shared/lib/getRandomСharacteristic";
+import { getRandomCharacteristic } from "../../../shared/lib/getRandomCharacteristic";
 
 const initialState = {
   survivors: [],
@@ -18,20 +18,43 @@ export const survivorSlice = createSlice({
   initialState,
   name: "Survivors",
   reducers: {
-    addSurvivor(state) {
-      console.log(getRandomCharacteristic());
+    addSurvivor(state, action) {
+      const generateCharacteristics = () => {
+        const fields = [
+          "age",
+          "fertility",
+          "sex",
+          "profession",
+          "phobia",
+          "hobby",
+          "baggage",
+          "fact1",
+          "fact2",
+        ];
+
+        const characteristics = fields.reduce((acc, item) => {
+          let randomCharacteristic = getRandomCharacteristic(item);
+
+          if (state.usedParams[item]) {
+            while (state.usedParams[item].includes(randomCharacteristic)) {
+              randomCharacteristic = getRandomCharacteristic(item);
+            }
+
+            state.usedParams[item].push(randomCharacteristic);
+          }
+
+          acc[item] = randomCharacteristic;
+
+          return acc;
+        }, {});
+
+        return characteristics;
+      };
 
       state.survivors.push({
         id: uuid(),
-        name: "Sara",
-        age: 25,
-        sex: "",
-        profession: "",
-        phobia: "",
-        hobby: "",
-        baggage: "",
-        fact1: "",
-        fact2: "",
+        name: action.payload,
+        ...generateCharacteristics(),
       });
     },
     removeSurvivor(state, action) {

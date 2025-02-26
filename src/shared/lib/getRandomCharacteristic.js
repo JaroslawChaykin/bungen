@@ -22,13 +22,15 @@ export const getRandomCharacteristic = (type) => {
       return professions[Math.floor(Math.random() * professions.length)];
     case "baggage":
       return baggage[Math.floor(Math.random() * baggage.length)];
-    case "facts1":
+    case "fact1":
       return facts1[Math.floor(Math.random() * facts1.length)];
-    case "facts2":
+    case "fact2":
       return facts2[Math.floor(Math.random() * facts2.length)];
-    case "hobbies":
+    case "hobby":
       return hobbies[Math.floor(Math.random() * hobbies.length)];
-    case "phobias":
+    case "phobia":
       return phobias[Math.floor(Math.random() * phobias.length)];
+    default:
+      return;
   }
 };
