@@ -17,7 +17,7 @@ export const getRandomCharacteristic = (type) => {
     case "sex":
       return Math.floor(Math.random() * 10) % 2 === 0 ? "Ж" : "М";
     case "fertility":
-      return Math.floor(Math.random() * 100) < 70; // Здесь симуляция рандома в процентах: в 70% случаев падает true в остальных false
+      return Math.floor(Math.random() * 100) < 70;
     case "profession":
       return professions[Math.floor(Math.random() * professions.length)];
     case "baggage":
