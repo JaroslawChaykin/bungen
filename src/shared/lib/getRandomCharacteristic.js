@@ -5,6 +5,7 @@ import {
   facts2,
   hobbies,
   phobias,
+  health,
 } from "../model";
 
 const maxAge = 80;
@@ -30,6 +31,8 @@ export const getRandomCharacteristic = (type) => {
       return hobbies[Math.floor(Math.random() * hobbies.length)];
     case "phobia":
       return phobias[Math.floor(Math.random() * phobias.length)];
+    case "health":
+      return health[Math.floor(Math.random() * health.length)];
     default:
       return;
   }

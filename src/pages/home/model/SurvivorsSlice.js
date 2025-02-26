@@ -30,6 +30,7 @@ export const survivorSlice = createSlice({
           "baggage",
           "fact1",
           "fact2",
+          'health'
         ];
 
         const characteristics = fields.reduce((acc, item) => {
@@ -76,4 +77,4 @@ export const survivorSlice = createSlice({
   },
 });
 
-export const { addSurvivor, removeSurvivor } = survivorSlice.actions;
+export const { addSurvivor, removeSurvivor, clean } = survivorSlice.actions;
