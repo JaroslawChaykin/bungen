@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeSurvivor } from "../../model/SurvivorsSlice";
+import { removeSurvivor } from "pages/home/model/SurvivorsSlice";
 
 export const SurvivorCard = ({ survivor }) => {
   const dispatch = useDispatch();
