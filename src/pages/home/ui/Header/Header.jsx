@@ -1,7 +1,15 @@
+import Container from "src/shared/Container";
+
 export const Header = ({ children }) => {
   return (
-    <header className="bg-black flex align-middle h-[70px]">
-      {children}
+    <header className="h-[90px] w-screen p-2">
+      <Container>
+        <div className="flex justify-center">
+          <div className="flex gap-3 w-fit h-full p-4 px-10 rounded-xl bg-linear-to-r from-white/20 to-white/10 backdrop-blur-md ">
+            {children}
+          </div>
+        </div>
+      </Container>
     </header>
   );
 };

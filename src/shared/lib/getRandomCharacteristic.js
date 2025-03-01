@@ -1,13 +1,20 @@
-import { baggage, facts1, facts2, health, hobbies, phobias, professions } from "../model";
+import {
+  baggage,
+  facts1,
+  facts2,
+  health,
+  hobbies,
+  phobias,
+  professions,
+} from "../model";
 
-
-const maxAge = 80;
-const minAge = 18;
+const MAX_AGE = 80;
+const MIN_AGE = 18;
 
 export const getRandomCharacteristic = (type) => {
   switch (type) {
     case "age":
-      return Math.floor(Math.random() * (maxAge - minAge + 1) + minAge);
+      return Math.floor(Math.random() * (MAX_AGE - MIN_AGE + 1) + MIN_AGE);
     case "sex":
       return Math.floor(Math.random() * 10) % 2 === 0 ? "Ж" : "М";
     case "fertility":
