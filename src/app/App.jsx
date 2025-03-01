@@ -1,5 +1,5 @@
 import { HomePage } from "../pages/home";
-import { StoreProvider } from "./providers/storeProvider";
+import { StoreProvider } from "./providers/StoreProvider";
 
 const App = () => {
   return (

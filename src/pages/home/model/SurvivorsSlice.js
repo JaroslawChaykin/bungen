@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
-import { getRandomCharacteristic } from "shared/lib/getRandomCharacteristic";
+import { getRandomCharacteristic } from "src/shared/lib/getRandomCharacteristic";
 
 const initialState = {
   survivors: [],
@@ -30,7 +30,7 @@ export const survivorSlice = createSlice({
           "baggage",
           "fact1",
           "fact2",
-          'health'
+          "health",
         ];
 
         const characteristics = fields.reduce((acc, item) => {

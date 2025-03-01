@@ -1,12 +1,5 @@
-import {
-  baggage,
-  facts1,
-  facts2,
-  health,
-  hobbies,
-  phobias,
-  professions,
-} from "shared/model";
+import { baggage, facts1, facts2, health, hobbies, phobias, professions } from "../model";
+
 
 const maxAge = 80;
 const minAge = 18;
