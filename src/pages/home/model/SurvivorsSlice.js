@@ -40,9 +40,7 @@ export const survivorSlice = createSlice({
           if (state.usedParams[item]) {
             while (state.usedParams[item].includes(randomCharacteristic)) {
               if (characteristicLimit[item] === state.usedParams[item].length) {
-                acc[item] = "Пустая характеристика";
-
-                return acc;
+                state.usedParams[item] = [];
               }
 
               randomCharacteristic = getRandomCharacteristic(item);
