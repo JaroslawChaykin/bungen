@@ -50,3 +50,5 @@ export const phobias = [
   "Стазобазофобия", // боязнь стоять или ходить
   "Турбофобия", // боязнь скорости
 ];
+
+export const phobiasLimit = phobias.length

@@ -50,3 +50,5 @@ export const professions = [
   "Коллекционер песен",
   "Мастер головоломок",
 ];
+
+export const professionsLimit = professions.length;

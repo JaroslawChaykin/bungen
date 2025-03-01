@@ -60,3 +60,5 @@ export const facts2 = [
   "Смотрел на муравьев часами",
   "Гладил всех собак в парке",
 ];
+
+export const facts2Limit = facts2.length

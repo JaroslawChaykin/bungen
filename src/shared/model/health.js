@@ -30,3 +30,5 @@ export const health = [
   "Идеально здоров",
   "Шизофрения",
 ];
+
+export const healthLimit = health.length

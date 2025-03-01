@@ -60,3 +60,5 @@ export const baggage = [
   "Пластиковый световой меч",
   "Надувной фламинго",
 ];
+
+export const baggageLimit = baggage.length
