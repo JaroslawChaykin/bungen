@@ -20,6 +20,10 @@ export const survivorSlice = createSlice({
   name: "Survivors",
   reducers: {
     addSurvivor(state, action) {
+      if (state.survivors.length === 10) {
+        return;
+      }
+
       const generateCharacteristics = () => {
         const fields = [
           "age",
