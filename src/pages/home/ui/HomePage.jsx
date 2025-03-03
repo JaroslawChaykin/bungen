@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Header } from "./Header/Header";
-import { BunButton } from "src/shared/ui/BunButton/BunButton";
+import { BunButton } from "src/shared/ui/BunButton";
 
 import { addSurvivor } from "../model/SurvivorsSlice";
 import { SurvivorList } from "./SurvivorList/SurvivorList";

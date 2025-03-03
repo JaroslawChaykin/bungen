@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { AiFillDelete, AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { removeSurvivor } from "../../model/SurvivorsSlice";
 import { CharacteristicRow } from "../CharacteristicRow/CharacteristicRow";
-import { BunIconButton } from "src/shared/ui/BunButton/BunIconButton";
+import { BunIconButton } from "src/shared/ui/BunIconButton";
 
 export const SurvivorCard = ({ survivor, allIsShow }) => {
   const [cardIsShow, setCardIsShow] = useState(false);
