@@ -1,18 +1,28 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AiFillDelete, AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { removeSurvivor } from "../../model/SurvivorsSlice";
+
 import { CharacteristicRow } from "../CharacteristicRow/CharacteristicRow";
 import { BunIconButton } from "src/shared/ui/BunIconButton";
+import { BunInput } from "src/shared/ui/BunInput";
+
+import { removeSurvivor } from "../../model/SurvivorsSlice";
 
 export const SurvivorCard = ({ survivor, allIsShow }) => {
+  const [name, setName] = useState("");
   const [cardIsShow, setCardIsShow] = useState(false);
   const dispatch = useDispatch();
 
   return (
     <div className="w-[300px] h-[390px] rounded-2xl bg-linear-to-r from-pink-300/20 to-gray-800/10 backdrop-blur-xl">
-      <div className="flex items-center justify-between pl-5 pr-3 text-3xl font-bold h-14">
-        <span>{survivor.name}</span>
+      <div className="flex items-center justify-between pl-5 pr-3 h-14">
+        <span>
+          <BunInput
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder={"Ваше имя"}
+          />
+        </span>
         <div className="flex gap-1">
           <span className="cursor-pointer">
             {cardIsShow ? (

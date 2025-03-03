@@ -1,4 +1,4 @@
-import Container from "src/shared/Container";
+import { Container } from "src/shared/ui/Container";
 
 export const Header = ({ children }) => {
   return (

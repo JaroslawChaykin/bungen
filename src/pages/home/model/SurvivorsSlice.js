@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
+
 import { getRandomCharacteristic } from "src/shared/lib/getRandomCharacteristic";
 import { characteristicLimit } from "src/shared/model/characteristicsLimit";
 

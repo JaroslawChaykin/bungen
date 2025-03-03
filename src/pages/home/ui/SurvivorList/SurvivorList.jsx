@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+
 import { SurvivorCard } from "../SurvivorCard/SurvivorCard";
 
 export const SurvivorList = ({ allIsShow }) => {

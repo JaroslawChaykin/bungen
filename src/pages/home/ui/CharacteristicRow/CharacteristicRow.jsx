@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+
 import { BunIconButton } from "src/shared/ui/BunIconButton";
 
 export const CharacteristicRow = ({
